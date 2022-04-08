@@ -1,4 +1,5 @@
-const url = process.env.DATABASE_URL
+//const url = process.env.DATABASE_URL
+const url = "mongodb+srv://misoCraftAdmin:xMkIpGr6ilDXKJr7@misocraft.ni084.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 import {MongoClient} from "mongodb" 
 
 export default async function handler(req, res){

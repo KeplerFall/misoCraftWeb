@@ -2,6 +2,10 @@ import axios from "axios";
 
 const LoginForm = ()=>{
 
+        function clickTest(){
+            console.log(process.env.DATABASE_URL)
+        }
+
         function authUser(){
             let username = document.querySelector('.usernameLogin').value
             let password = document.querySelector('.passwordLogin').value
@@ -13,7 +17,7 @@ const LoginForm = ()=>{
 
         return(
             <div className="loginForm flex flex-col h-[400px] place-content-around text-center">
-                <p className="flex justify-center"><img src="https://i.imgur.com/6Tv9Wee.png" alt="" className="max-h-[80px] max-w-[80px] rounded-full" /></p>
+                <p className="flex justify-center"><img src="https://i.imgur.com/6Tv9Wee.png" alt="" className="max-h-[80px] max-w-[80px] rounded-full" onClick={clickTest} /></p>
                 <p className="text-6xl font-bold font-mono underline decoration-blue-400 text-gray-800"> Log In </p>
                 <input type="text" className="usernameLogin text-2xl outline-0 border-b-2 border-gray-400 pl-3" placeholder="Nome de Usuário" />
                 <input type="password" className="passwordLogin text-2xl outline-0 border-b-2 border-gray-400 pl-3" placeholder="Senha"/>
