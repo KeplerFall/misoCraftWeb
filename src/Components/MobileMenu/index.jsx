@@ -31,12 +31,10 @@ const MobileMenu = () =>{
                     <div className="bg-white py-2 my-2 font-bold">Perfil</div>
                     <div className="bg-white py-2 my-2 font-bold">Mercado</div>
                     <div className="bg-white py-2 my-2 font-bold">Segurança</div>
-                    
                 </div>
                 
                 <div className="fixed bottom-0 bg-red-700 py-2 mt-2 font-bold text-white w-[60vw] text-center">Sair</div>
             </div>
-
         </div>
         
     )

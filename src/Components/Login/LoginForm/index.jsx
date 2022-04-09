@@ -2,11 +2,6 @@ import axios from "axios";
 import Router from "next/router"
 
 const LoginForm = ()=>{
-
-        function clickTest(){
-            console.log(process.env.DATABASE_URL)
-        }
-
         function authUser(){
 
             let username = document.querySelector('.usernameLogin').value
