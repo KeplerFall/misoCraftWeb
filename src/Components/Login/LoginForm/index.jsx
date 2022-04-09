@@ -1,4 +1,5 @@
 import axios from "axios";
+import Router from "next/router"
 
 const LoginForm = ()=>{
 
@@ -7,11 +8,19 @@ const LoginForm = ()=>{
         }
 
         function authUser(){
+
             let username = document.querySelector('.usernameLogin').value
             let password = document.querySelector('.passwordLogin').value
 
+            sessionStorage.setItem("username", username)
+            sessionStorage.setItem("password", password)
+
             axios.post('/api/authUser', {username: username, password: password}).then((response)=>{
-                console.log(response.data.message)
+                
+                
+                if(response.data.message == true){
+                    Router.push("/dashboard")
+                }
             })
         }
 
@@ -21,6 +30,7 @@ const LoginForm = ()=>{
                 <p className="text-6xl font-bold font-mono underline decoration-blue-400 text-gray-800"> Log In </p>
                 <input type="text" className="usernameLogin text-2xl outline-0 border-b-2 border-gray-400 pl-3" placeholder="Nome de Usuário" />
                 <input type="password" className="passwordLogin text-2xl outline-0 border-b-2 border-gray-400 pl-3" placeholder="Senha"/>
+                
                 <div className="text-3xl bg-blue-400 text-gray-100 font-bold rounded-lg cursor-pointer" onClick={authUser}>Entrar</div>
             </div>
         )
