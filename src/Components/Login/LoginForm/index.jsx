@@ -6,7 +6,7 @@ const LoginForm = ()=>{
         const [count, setCount] = useState(0)
         function authUser(){
             const loading = document.querySelector('.loading')
-            let username = document.querySelector('.usernameLogin').value
+            let username = document.querySelector('.usernameLogin').value.toLowerCase()
             let password = document.querySelector('.passwordLogin').value
             loading.classList.remove("hidden")
             

@@ -30,16 +30,15 @@ const MobileMenu = () =>{
                     <div className="MenuTitle text-3xl">Menu</div>
                     <div className="CloseMenu text-3xl px-3 font-bold" onClick={closeMenu}> X </div>
                 </div>
-                <div className="MenuItems">
-                    <div className=""><img src="https://i.imgur.com/T4rJ69p.png" className="w-[60px] h-[60px] text-center"/> Perfil</div>
-                    <div className="">Mercado</div>
-                    <div className="">Segurança</div>
+                <div className="MenuItems flex flex-wrap place-content-around p-5">
+                    <div className="text-center bg-gray-600 text-white rounded-lg w-[]"><img src="https://i.imgur.com/T4rJ69p.png" className="w-[60px] h-[60px] text-center grayscale-0"/> Perfil</div>
+                    <div className="text-center bg-gray-600 text-white rounded-lg"><img src="https://i.imgur.com/T4rJ69p.png" className="w-[60px] h-[60px] text-center grayscale-0"/>Mercado</div>
+                    <div className="text-center bg-gray-600 text-white rounded-lg"><img src="https://i.imgur.com/T4rJ69p.png" className="w-[60px] h-[60px] text-center grayscale-0"/>Segurança</div>
                 </div>
                 
-                <div className="fixed bottom-0 bg-red-700 py-2 mt-2 font-bold text-white w-[60vw] text-center">Sair</div>
+                <div className="fixed bottom-0 bg-red-700 py-2 mt-2 font-bold text-white w-[100vw] text-center">Sair</div>
             </div>
         </div>
-        
     )
 }
 
